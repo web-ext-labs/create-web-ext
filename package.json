@@ -1,23 +1,31 @@
 {
-  "name": "web-ext",
-  "version": "1.0.0",
-  "description": " Tool to create a directory structure for getting started with an addon",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/create-web-ext/init.git"
-  },
-  "keywords": [
-    "addons",
-    "javascript"
-  ],
-  "author": "championshuttler",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/create-web-ext/init/issues"
-  },
-  "homepage": "https://github.com/create-web-ext/init#readme"
+    "name": "web-ext",
+    "version": "1.0.0",
+    "description": " Tool to create a directory structure for getting started with an addon",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/create-web-ext/init.git"
+    },
+    "keywords": [
+        "addons",
+        "javascript"
+    ],
+    "author": "championshuttler",
+    "bin": {
+        "web-tool": "./index.js"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/create-web-ext/init/issues"
+    },
+    "homepage": "https://github.com/create-web-ext/init#readme",
+    "dependencies": {
+        "commander": "^2.14.1",
+        "inquirer": "^5.1.0",
+        "woofwoof": "^3.6.7"
+    }
 }
