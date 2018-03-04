@@ -6,17 +6,16 @@ const Lib = require('./Lib');
 const createManifest = function (payload) {
 	const manifestJson = {
 		"manifest_version": 2,
-		"name": payload.name || 'my addon',
+		"name": payload.name || 'My extension',
 		"description": payload.description || 'description',
 		"version": payload.version || '1.1.1',
 		"icons": {
 			"64": "icons/icon.png"
 		}
 	};
-
-	fs.ensureDir(path.join(__dirname, payload.name))
+	const currentPath = process.cwd();
+	fs.ensureDir(path.join(currentPath, payload.name))
 		.then(dir => {
-
 			Lib.copyIcon(dir);
 
 			if(payload.background_script) {

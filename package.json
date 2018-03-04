@@ -20,6 +20,8 @@
         "url": "https://github.com/web-ext-labs/create-web-ext/issues"
     },
     "homepage": "https://github.com/web-ext-labs/create-web-ext#readme",
+    "preferGlobal": true,
+    "bin": "./index.js",
     "dependencies": {
         "fs-extra": "^5.0.0",
         "inquirer": "^5.1.0",
