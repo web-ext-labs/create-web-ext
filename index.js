@@ -33,7 +33,7 @@ inquirer
         {
             type: 'confirm',
             name: 'browser_action',
-            message: 'Would you like to add a browser script?'
+            message: 'Would you like to add a browser action?'
         },
         {
             type: 'confirm',
