@@ -14,20 +14,24 @@ Optionally, you may like:
 If you had already installed `create-web-ext` from npm,
 you may need to uninstall it first:
 
-    npm uninstall --global create-web-ext
+    $ npm uninstall --global create-web-ext
 
 Change into the source and install all dependencies:
 
-    git clone https://github.com/web-ext-labs/create-web-ext.git
-    cd create-web-ext
-    npm install
+    $ git clone https://github.com/web-ext-labs/create-web-ext.git
+    $ cd create-web-ext
+    $ npm install
+
+Testing
+
+    $ npm test
 
 Link it to your node installation:
 
-    npm link
+    $ npm link
 
 You are all set, check
 
-    create-web-ext -v
+    $ create-web-ext -v
 
 You can now run it from any directory.
