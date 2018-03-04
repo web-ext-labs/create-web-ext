@@ -24,8 +24,6 @@
     },
     "homepage": "https://github.com/create-web-ext/init#readme",
     "dependencies": {
-        "commander": "^2.14.1",
-        "inquirer": "^5.1.0",
-        "woofwoof": "^3.6.7"
+        "inquirer": "^5.1.0"
     }
 }
