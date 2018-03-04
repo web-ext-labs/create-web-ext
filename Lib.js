@@ -1,28 +1,33 @@
 const fs = require('fs-extra')
+const path = require('path');
 const Lib = {};
 
 Lib.copyIcon = dir => {
-    console.log(fs.copySync('./assets/icons', `${dir}/icons`));
+    console.log(copier('icons', 'icons', dir));
 }
 
 Lib.createBG = dir => {
-    console.log(fs.copySync('./assets/background_script.js', `${dir}/background_script.js`));
+    console.log(copier('background_script.js', 'background_script.js', dir));
 }
 
 Lib.createCS = dir => {
-    console.log(fs.copySync('./assets/content_script.js', `${dir}/content_script.js`));
+    console.log(copier('content_script.js', 'content_script.js', dir));
 }
 
 Lib.createBA = dir => {
-    console.log(fs.copySync('./assets/popup', `${dir}/browserAction`));
+    console.log(copier('popup', 'browserAction', dir));
 }
 
 Lib.createPA = dir => {
-    console.log(fs.copySync('./assets/popup', `${dir}/pageAction`));
+    console.log(copier('popup', 'pageAction', dir));
 }
 
 Lib.createOP = dir => {
-    console.log(fs.copySync('./assets/popup', `${dir}/options`));
+    console.log(copier('popup', 'options', dir));
+}
+
+function copier(from, to, dir) {
+    return fs.copySync(path.join(__dirname, 'assets', from), path.join(dir, to));
 }
 
 module.exports = Lib;
