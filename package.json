@@ -3,7 +3,7 @@
     "version": "0.0.2",
     "description": "Tool to create a directory structure for getting started with an addon",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha"
     },
     "repository": {
         "type": "git",
@@ -26,5 +26,9 @@
         "fs-extra": "^5.0.0",
         "inquirer": "^5.1.0",
         "json-format": "^1.0.1"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.0.1"
     }
 }
