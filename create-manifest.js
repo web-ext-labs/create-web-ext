@@ -4,11 +4,10 @@ const jsonFormat = require('json-format');
 
 const createManifest = function (payload) {
 	fs.ensureDir(path.join(__dirname, payload.name))
-		.then((dir) => {
-			fs.outputFile(`${dir}/manifes.json`, jsonFormat(payload))
-				.catch(err => { throw err });
+		.then(dir => {
+			return fs.outputFile(`${dir}/manifest.json`, jsonFormat(payload));
 		})
-		.catch(err => { throw(err) });
+		.catch(err => console.log(err));
 };
 
 module.exports = createManifest;
