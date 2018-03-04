@@ -1,6 +1,6 @@
 {
     "name": "create-web-ext",
-    "version": "1.1.1",
+    "version": "0.0.1",
     "description": "Tool to create a directory structure for getting started with an addon",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
