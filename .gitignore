@@ -1,1 +1,8 @@
-node_modules
+.DS_Store
+**/.DS_Store
+/.DS_Store
+__MACOSX/
+node_modules/
+
+yarn.lock
+.vscode/*

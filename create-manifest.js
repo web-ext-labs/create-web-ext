@@ -1,12 +1,13 @@
-
-const fs = require('fs');
+const fs = require('fs-extra')
 const path = require('path');
+const jsonFormat = require('json-format');
 
 const createManifest = function (payload) {
-  fs.mkdir(path.join(__dirname, payload.name), function(err, dir) {
-    const manifestStream = fs.createWriteStream(path.join(__dirname, payload.name, 'manifest.json'));
-    manifestStream.write(JSON.stringify(payload));
-  })
+	fs.ensureDir(path.join(__dirname, payload.name))
+		.then(dir => {
+			return fs.outputFile(`${dir}/manifest.json`, jsonFormat(payload));
+		})
+		.catch(err => console.log(err));
 };
 
 module.exports = createManifest;

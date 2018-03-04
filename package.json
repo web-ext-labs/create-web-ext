@@ -1,29 +1,28 @@
 {
-    "name": "web-ext",
-    "version": "1.0.0",
-    "description": " Tool to create a directory structure for getting started with an addon",
-    "main": "index.js",
+    "name": "create-web-ext",
+    "version": "1.1.1",
+    "description": "Tool to create a directory structure for getting started with an addon",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/create-web-ext/init.git"
+        "url": "https://github.com/web-ext-labs/create-web-ext.git"
     },
     "keywords": [
         "addons",
-        "javascript"
+        "javascript",
+        "web-ext"
     ],
-    "author": "championshuttler",
-    "bin": {
-        "web-tool": "./index.js"
-    },
-    "license": "ISC",
+    "author": "web-ext-labs",
+    "license": "MIT",
     "bugs": {
-        "url": "https://github.com/create-web-ext/init/issues"
+        "url": "https://github.com/web-ext-labs/create-web-ext/issues"
     },
-    "homepage": "https://github.com/create-web-ext/init#readme",
+    "homepage": "https://github.com/web-ext-labs/create-web-ext#readme",
     "dependencies": {
-        "inquirer": "^5.1.0"
+        "fs-extra": "^5.0.0",
+        "inquirer": "^5.1.0",
+        "json-format": "^1.0.1"
     }
 }
