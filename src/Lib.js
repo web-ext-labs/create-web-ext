@@ -27,7 +27,7 @@ Lib.createOP = dir => {
 }
 
 function copier(from, to, dir) {
-    return fs.copySync(path.join(__dirname, 'assets', from), path.join(dir, to));
+    return fs.copySync(path.join(__dirname, '../', 'assets', from), path.join(dir, to));
 }
 
 module.exports = Lib;
