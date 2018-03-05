@@ -1,0 +1,13 @@
+{
+  "globals": {
+    "describe": true,
+    "it": true,
+    "beforeEach": true,
+    "before": true,
+   "afterEach": true
+  },
+  "extends": "standard",
+  "rules": {
+    "arrow-parens": 0
+  }
+}
