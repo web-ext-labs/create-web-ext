@@ -1,1 +1,1 @@
-document.getElementById('myHeading').style.color = "red";
+document.getElementById('myHeading').style.color = 'red'
