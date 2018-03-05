@@ -40,6 +40,7 @@ You can now run it from any directory.
 
 Here is the basic suggested skeleton for your webextension with name for example `myAddon` : 
 
+```text
 myAddon
    ├── background_script.js
    ├── browserAction
@@ -58,7 +59,7 @@ myAddon
        ├── index.html
        ├── script.js
        └── style.css
-
+       ```
 
 
 
