@@ -35,3 +35,30 @@ You are all set, check
     $ create-web-ext -v
 
 You can now run it from any directory.
+
+## Web-extension Structure
+
+Here is the basic suggested skeleton for your webextension with name for example `myAddon` : 
+
+myAddon
+   ├── background_script.js
+   ├── browserAction
+   │   ├── index.html
+   │   ├── script.js
+   │   └── style.css
+   ├── content_script.js
+   ├── icons
+   │   └── icon.png
+   ├── manifest.json
+   ├── options
+   │   ├── index.html
+   │   ├── script.js
+   │   └── style.css
+   └── pageAction
+       ├── index.html
+       ├── script.js
+       └── style.css
+
+
+
+
