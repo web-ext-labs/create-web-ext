@@ -1,7 +1,7 @@
 const inquirer = require('inquirer')
 const createManifest = require('./create-manifest')
 
-const startHere = () => {
+const init = () => {
   inquirer
     .prompt([{
       type: 'input',
@@ -56,4 +56,4 @@ const startHere = () => {
     })
 }
 
-module.exports = startHere
+module.exports = init

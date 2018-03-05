@@ -1,7 +1,7 @@
 const fs = require('fs-extra')
 const path = require('path')
-const jsonFormat = require('json-format')
-const Lib = require('./Lib')
+const formatJSON = require('json-format')
+const fsUtil = require('./fs-util')
 
 const createManifest = function (payload) {
   const manifestJson = {
@@ -13,14 +13,16 @@ const createManifest = function (payload) {
       '64': 'icons/icon.png'
     }
   }
+
   const currentPath = process.cwd()
+
   fs.ensureDir(path.join(currentPath, payload.name))
     .then(dir => {
-      Lib.copyIcon(dir)
+      fsUtil.copyIcon(dir)
 
       if (payload.background_script) {
         manifestJson.background_script = 'background_script.js'
-        Lib.createBG(dir)
+        fsUtil.createBackgroundScript(dir)
       }
 
       if (payload.content_script) {
@@ -30,7 +32,7 @@ const createManifest = function (payload) {
             'js': ['content_script.js']
           }
         ]
-        Lib.createCS(dir)
+        fsUtil.createContentScript(dir)
       }
 
       if (payload.browser_action) {
@@ -41,7 +43,7 @@ const createManifest = function (payload) {
           'default_popup': 'browserAction/index.html',
           'default_title': manifestJson.name
         }
-        Lib.createBA(dir)
+        fsUtil.createBrowserAction(dir)
       }
 
       if (payload.page_action) {
@@ -52,19 +54,20 @@ const createManifest = function (payload) {
           'default_popup': 'pageAction/index.html',
           'default_title': manifestJson.name
         }
-        Lib.createPA(dir)
+        fsUtil.createPageAction(dir)
       }
 
       if (payload.options_ui) {
         manifestJson.options_ui = {
           'page': 'options/index.html'
         }
-        Lib.createPA(dir)
+        fsUtil.createOptionsUI(dir)
       }
 
-      return fs.outputFile(`${dir}/manifest.json`, jsonFormat(manifestJson))
+      return fs.outputFile(`${dir}/manifest.json`, formatJSON(manifestJson))
     })
     .catch(console.log)
+
   return Promise.resolve('success')
 }
 
