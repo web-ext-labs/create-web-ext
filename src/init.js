@@ -47,7 +47,7 @@ const init = () => {
     {
       type: 'confirm',
       name: 'options_ui',
-      message: 'Would you like to add a extensions option?',
+      message: `Would you like to add extensions' option?`,
       default: false
     }
     ])
