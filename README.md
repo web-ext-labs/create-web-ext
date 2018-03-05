@@ -38,7 +38,7 @@ You can now run it from any directory.
 
 ## Web-extension Structure
 
-Here is the basic suggested skeleton for your webextension with name for example `myAddon` : 
+Here is the created skeleton for your webextension with name for example `myAddon` when you selected all options : 
 
 ```text
 myAddon
