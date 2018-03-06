@@ -18,7 +18,15 @@ const init = () => {
       type: 'input',
       name: 'version',
       message: 'Version of your add-on?',
-      default: '1.1.1'
+      default: '1.1.1',
+      validate: function(value) {
+      var pass = value.match((\d*\.)+\d*);
+      if (pass) {
+        return true;
+      }
+
+      return 'Please enter a valid version number';
+}
     },
     {
       type: 'confirm',
