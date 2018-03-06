@@ -4,7 +4,7 @@
     "description": "Tool to create a directory structure for getting started with an addon",
     "scripts": {
         "lint": "eslint src/*",
-        "test": "mocha"
+        "test": "eslint src/* && mocha"
     },
     "repository": {
         "type": "git",
