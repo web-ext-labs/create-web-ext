@@ -7,7 +7,7 @@ const copier = (from, to, dir) => {
 }
 
 fsUtil.copyIcon = dir => {
-  copier('icons', 'icons', dir)
+  copier('icons', 'icons', dir);
 }
 
 fsUtil.createBackgroundScript = dir => {
