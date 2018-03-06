@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/web-ext-labs/create-web-ext.svg?branch=master)](https://travis-ci.org/web-ext-labs/create-web-ext)
+
 # create-web-ext
 
 [`create-web-ext`](https://www.npmjs.com/package/create-web-ext/) is a scaffolding tool for browser extensions. It takes input few parameters and outputs a complete scaffolded browser extension project.
