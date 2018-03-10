@@ -6,18 +6,18 @@ const init = () => {
     .prompt([{
       type: 'input',
       name: 'name',
-      message: `What's the name of your add-on?`,
+      message: `Addon name `,
       default: 'My extension'
     },
     {
       type: 'input',
       name: 'description',
-      message: 'Description of the add-on?'
+      message: 'Description '
     },
     {
       type: 'input',
       name: 'version',
-      message: 'Version of your add-on?',
+      message: 'Version ',
       default: '0.0.1',
       validate: val => {
         if (val.match(/^(\d+\.)?(\d+\.)?(\*|\d+)$/i)) return true
@@ -27,31 +27,31 @@ const init = () => {
     {
       type: 'confirm',
       name: 'background_script',
-      message: 'Would you like to add a background script?',
+      message: 'Include background script?',
       default: false
     },
     {
       type: 'confirm',
       name: 'content_script',
-      message: 'Would you like to add a content script?',
+      message: 'Include content script?',
       default: false
     },
     {
       type: 'confirm',
       name: 'browser_action',
-      message: 'Would you like to add a browser action?',
+      message: 'Include browser action?',
       default: false
     },
     {
       type: 'confirm',
       name: 'page_action',
-      message: 'Would you like to add a page action?',
+      message: 'Include page action?',
       default: false
     },
     {
       type: 'confirm',
       name: 'options_ui',
-      message: `Would you like to add extensions' option?`,
+      message: `Include addon options`,
       default: false
     }
     ])
