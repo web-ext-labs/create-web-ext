@@ -22,7 +22,7 @@ const createManifest = function (payload) {
 
       if (payload.background_script) {
         manifestJson.background = {
-          "scripts": ["background_script.js"]
+          'scripts': ["background_script.js"]
         }
         fsUtil.createBackgroundScript(dir)
       }
