@@ -24,7 +24,7 @@ You are all set, check
     $ Include browser action? (y/N) y
     $ Include page action? (y/N) y
     $ Include addon options? (y/N) y
-    Done.
+    ✨  Done.
     
 This will generate a directory `myAddon` with following structure
 

@@ -15,9 +15,11 @@ const createManifest = function (payload) {
   }
 
   const currentPath = process.cwd()
+  const folderPath = path.join(currentPath, payload.name)
 
-  return fs.ensureDir(path.join(currentPath, payload.name))
+  return fs.ensureDir(folderPath)
     .then(dir => {
+      dir = dir || folderPath
       fsUtil.copyIcon(dir)
 
       if (payload.background_script) {
