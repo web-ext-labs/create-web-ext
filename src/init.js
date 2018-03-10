@@ -51,7 +51,7 @@ const init = () => {
     {
       type: 'confirm',
       name: 'options_ui',
-      message: `Include addon options`,
+      message: `Include addon options?`,
       default: false
     }
     ])
