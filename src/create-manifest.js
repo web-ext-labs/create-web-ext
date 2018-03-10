@@ -21,7 +21,9 @@ const createManifest = function (payload) {
       fsUtil.copyIcon(dir)
 
       if (payload.background_script) {
-        manifestJson.background_script = 'background_script.js'
+        manifestJson.background = {
+          "scripts": ["background_script.js"]
+        }
         fsUtil.createBackgroundScript(dir)
       }
 
