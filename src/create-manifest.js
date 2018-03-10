@@ -16,7 +16,7 @@ const createManifest = function (payload) {
 
   const currentPath = process.cwd()
 
-  fs.ensureDir(path.join(currentPath, payload.name))
+  return fs.ensureDir(path.join(currentPath, payload.name))
     .then(dir => {
       fsUtil.copyIcon(dir)
 
@@ -67,10 +67,9 @@ const createManifest = function (payload) {
       }
 
       return fs.outputFile(`${dir}/manifest.json`, formatJSON(manifestJson))
+        .then(s => '✨  Done.')
     })
-    .catch(console.log)
-
-  return Promise.resolve('success')
+    .catch(e => ('Something went wrong'))
 }
 
 module.exports = createManifest

@@ -56,8 +56,10 @@ const init = () => {
     }
     ])
     .then(answers => {
-      createManifest(answers)
+      return createManifest(answers)
     })
+    .then(console.log)
+    .catch(console.log)
 }
 
 module.exports = init
