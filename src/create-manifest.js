@@ -15,7 +15,10 @@ const createManifest = function (payload) {
   }
 
   const currentPath = process.cwd()
-  const folderPath = path.join(currentPath, payload.name)
+  const name = payload.name.replace(/[`~!@#$ %^&*()_|+\-=÷¿?;:'",.<>{}[\]\\/]/gi, '').toLowerCase()
+  /* eslint-disable-next-line prefer-promise-reject-errors */
+  if (name === '') return Promise.reject('Please provide correct extension name.')
+  const folderPath = path.join(currentPath, name)
 
   return fs.ensureDir(folderPath)
     .then(dir => {
