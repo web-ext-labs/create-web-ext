@@ -11,7 +11,7 @@
 You are all set, check
 
     $ create-web-ext -v
-    create-web-ext version 0.0.3
+    create-web-ext version 1.0.0
 
 ## Usage
 
