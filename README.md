@@ -20,7 +20,7 @@ You are all set, check
     $ Description My addon will rock \o/
     $ Version  (0.0.1) 1.1.1
     $ Include background script? (y/n) y
-    $ AddonInclude content script? (y/N) y
+    $ Include content script? (y/N) y
     $ Include browser action? (y/N) y
     $ Include page action? (y/N) y
     $ Include addon options? (y/N) y
